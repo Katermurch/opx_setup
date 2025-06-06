@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="English" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hardware_control package &#8212; BlueFridgeNonLin 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=2ed17a75"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="standard_sequences package" href="standard_sequences.html" />
+    <link rel="prev" title="experiment_configuration package" href="experiment_configuration.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="hardware-control-package">
+<h1>hardware_control package<a class="headerlink" href="#hardware-control-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-hardware_control.atsapi">
+<span id="hardware-control-atsapi-module"></span><h2>hardware_control.atsapi module<a class="headerlink" href="#module-hardware_control.atsapi" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-hardware_control.bnc">
+<span id="hardware-control-bnc-module"></span><h2>hardware_control.bnc module<a class="headerlink" href="#module-hardware_control.bnc" title="Link to this heading">¶</a></h2>
+<p>Created on Wed Sep  2 09:53:38 2020.</p>
+<p>&#64;author: J. Monroe</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.configure_for_sweep">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">configure_for_sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_freq_GHz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_freq_GHz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_dBm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dwell_sec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_freq_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">201</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::421-4385A0002-0619::INSTR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.configure_for_sweep" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.get_bnc_freq_GHz">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">get_bnc_freq_GHz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::141-216340000-0292::INSTR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.get_bnc_freq_GHz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.gigatronics_bnc_output">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">gigatronics_bnc_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq_GHz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_dBm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::141-216340000-0292::INSTR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.gigatronics_bnc_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.output_sinusoidal_signal">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">output_sinusoidal_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssm_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GPIB0::3::INSTR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.output_sinusoidal_signal" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.set_DC_output">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">set_DC_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::421-4385A0002-0619::INSTR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voltage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.022</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.set_DC_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.set_bnc_output">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">set_bnc_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq_GHz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_dBm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::141-216340000-0292::INSTR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.set_bnc_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.set_noise_voltage">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">set_noise_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">noise</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::141-216340000-0292::INSTR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.set_noise_voltage" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.bnc.turn_on_and_off_bnc_output">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.bnc.</span></span><span class="sig-name descname"><span class="pre">turn_on_and_off_bnc_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bnc_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'USB0::0x03EB::0xAFFF::421-4385A0002-0619::INSTR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'on'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.bnc.turn_on_and_off_bnc_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-hardware_control.expt_parameters">
+<span id="hardware-control-expt-parameters-module"></span><h2>hardware_control.expt_parameters module<a class="headerlink" href="#module-hardware_control.expt_parameters" title="Link to this heading">¶</a></h2>
+<p>Created on Fri Mar  6 13:00:39 2020.</p>
+<p>&#64;author: P. M. Harrington, 06 March 2020</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.expt_parameters.expt_parameters">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.expt_parameters.</span></span><span class="sig-name descname"><span class="pre">expt_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expt_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.expt_parameters.expt_parameters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.expt_parameters.get_daq_parameters">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.expt_parameters.</span></span><span class="sig-name descname"><span class="pre">get_daq_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ro_dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IQangle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.expt_parameters.get_daq_parameters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.expt_parameters.get_device_parameters">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.expt_parameters.</span></span><span class="sig-name descname"><span class="pre">get_device_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.expt_parameters.get_device_parameters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.expt_parameters.get_expt_cal">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.expt_parameters.</span></span><span class="sig-name descname"><span class="pre">get_expt_cal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.expt_parameters.get_expt_cal" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.expt_parameters.get_instrument_address">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.expt_parameters.</span></span><span class="sig-name descname"><span class="pre">get_instrument_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instrument_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.expt_parameters.get_instrument_address" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.expt_parameters.get_pattern_parameters">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.expt_parameters.</span></span><span class="sig-name descname"><span class="pre">get_pattern_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.expt_parameters.get_pattern_parameters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-hardware_control.hardware_config">
+<span id="hardware-control-hardware-config-module"></span><h2>hardware_control.hardware_config module<a class="headerlink" href="#module-hardware_control.hardware_config" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.hardware_config.add_paths_to_sys">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.hardware_config.</span></span><span class="sig-name descname"><span class="pre">add_paths_to_sys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.hardware_config.add_paths_to_sys" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-hardware_control.srs_dg535">
+<span id="hardware-control-srs-dg535-module"></span><h2>hardware_control.srs_dg535 module<a class="headerlink" href="#module-hardware_control.srs_dg535" title="Link to this heading">¶</a></h2>
+<p>Created on Sat Jan 25 12:22:49 2020.</p>
+<p>&#64;author: P. M. Harrington, 25 January 2020</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hardware_control.srs_dg535.set_trigger_level">
+<span class="sig-prename descclassname"><span class="pre">hardware_control.srs_dg535.</span></span><span class="sig-name descname"><span class="pre">set_trigger_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">low_or_high_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hardware_control.srs_dg535.set_trigger_level" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-hardware_control.tewx">
+<span id="hardware-control-tewx-module"></span><h2>hardware_control.tewx module<a class="headerlink" href="#module-hardware_control.tewx" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-hardware_control.wx_programs">
+<span id="hardware-control-wx-programs-module"></span><h2>hardware_control.wx_programs module<a class="headerlink" href="#module-hardware_control.wx_programs" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-hardware_control">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hardware_control" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">BlueFridgeNonLin</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">BlueFridgeNonLin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">classes package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classifiers.html">classifiers package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daq.html">daq package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment_configuration.html">experiment_configuration package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">hardware_control package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_sequences.html">standard_sequences package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">BlueFridgeNonLin</a><ul>
+      <li>Previous: <a href="experiment_configuration.html" title="previous chapter">experiment_configuration package</a></li>
+      <li>Next: <a href="standard_sequences.html" title="next chapter">standard_sequences package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Murch Lab.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/hardware_control.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

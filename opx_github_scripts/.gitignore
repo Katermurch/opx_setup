@@ -1,0 +1,10 @@
+# Ignore everything in the Data folder
+Data/
+Quam_Qualibrate_Scripts/
+qua-libs-main/
+qualibrate_test/
+
+# Ignore all .npz files anywhere in the repository
+*.npz
+*.csv
+*.pkl

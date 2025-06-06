@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="English" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>standard_sequences package &#8212; BlueFridgeNonLin 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=2ed17a75"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="hardware_control package" href="hardware_control.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="standard-sequences-package">
+<h1>standard_sequences package<a class="headerlink" href="#standard-sequences-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="standard-sequences-t1-measurements-module">
+<h2>standard_sequences.T1_measurements module<a class="headerlink" href="#standard-sequences-t1-measurements-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-standard_sequences.parametric_coupling">
+<span id="standard-sequences-parametric-coupling-module"></span><h2>standard_sequences.parametric_coupling module<a class="headerlink" href="#module-standard_sequences.parametric_coupling" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.parametric_coupling.parametric_coupling_time_domain">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.parametric_coupling.</span></span><span class="sig-name descname"><span class="pre">parametric_coupling_time_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">101</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_para</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.parametric_coupling.parametric_coupling_time_domain" title="Link to this definition">¶</a></dt>
+<dd><p>Performs a time-domain parametric coupling experiment between qubits by
+applying a drive pulse and varying its duration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit1</strong> (<em>object</em>) -- The primary qubit being driven.</p></li>
+<li><p><strong>qubit2</strong> (<em>object</em>) -- The secondary qubit used for readout.</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- General experiment parameters, including mixer offsets.</p></li>
+<li><p><strong>num_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- Number of steps in the parametric time sweep. Defaults to 101.</p></li>
+<li><p><strong>ssm_para</strong> (<em>float</em><em>, </em><em>optional</em>) -- Sideband modulation frequency for parametric drive. Defaults to 0.</p></li>
+<li><p><strong>spec_amp</strong> (<em>float</em><em>, </em><em>optional</em>) -- Amplitude of parametric drive. Defaults to 0.5.</p></li>
+<li><p><strong>sweep_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- Maximum duration for parametric drive pulse. Defaults to 0.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, generates visualizations of the pulse sequence. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated pulse sequence for parametric coupling time-domain measurement.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="classes.html#classes.generator.Sequence" title="classes.generator.Sequence">Sequence</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="standard-sequences-pinopi-module">
+<h2>standard_sequences.pinopi module<a class="headerlink" href="#standard-sequences-pinopi-module" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-standard_sequences.rabi">
+<span id="standard-sequences-rabi-module"></span><h2>standard_sequences.rabi module<a class="headerlink" href="#module-standard_sequences.rabi" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi.amp_rabi_ge">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi.</span></span><span class="sig-name descname"><span class="pre">amp_rabi_ge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">101</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi.amp_rabi_ge" title="Link to this definition">¶</a></dt>
+<dd><p>This function should run the rabi ge sequence for a qubit, using the
+qubit's properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit_rabi</strong> (<em>_type_</em>) -- this is the qubit you are performing the rabi on</p></li>
+<li><p><strong>qubit2</strong> (<em>_type_</em>) -- this qubit exists for homodyne readout</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- a dictionary of general values for readout and hardware control</p></li>
+<li><p><strong>num_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- _description_. Defaults to 101.</p></li>
+<li><p><strong>sweep_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- _description_. Defaults to 200.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi.rabi_ef">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi.</span></span><span class="sig-name descname"><span class="pre">rabi_ef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi.rabi_ef" title="Link to this definition">¶</a></dt>
+<dd><p>This function should run the rabi ef sequence for a qubit, using the
+qubit's properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit_rabi</strong> (<em>object</em>) -- this is the qubit you are performing the rabi on</p></li>
+<li><p><strong>qubit2</strong> (<em>object</em>) -- this qubit exists for homodyne readout</p></li>
+<li><p><strong>readout</strong> (<em>object</em>) -- this object chooses ther readout parameters</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- a dictionary of general values for readout and hardware control</p></li>
+<li><p><strong>num_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- _description_. Defaults to 51.</p></li>
+<li><p><strong>sweep_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- _description_. Defaults to 200.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi.rabi_ge">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi.</span></span><span class="sig-name descname"><span class="pre">rabi_ge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">101</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi.rabi_ge" title="Link to this definition">¶</a></dt>
+<dd><p>This function should run the rabi ge sequence for a qubit, using the
+qubit's properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit_rabi</strong> (<em>_type_</em>) -- this is the qubit you are performing the rabi on</p></li>
+<li><p><strong>qubit2</strong> (<em>_type_</em>) -- this qubit exists for homodyne readout</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- a dictionary of general values for readout and hardware control</p></li>
+<li><p><strong>num_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- _description_. Defaults to 101.</p></li>
+<li><p><strong>sweep_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- _description_. Defaults to 200.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-standard_sequences.rabi_ef_no_swap">
+<span id="standard-sequences-rabi-ef-no-swap-module"></span><h2>standard_sequences.rabi_ef_no_swap module<a class="headerlink" href="#module-standard_sequences.rabi_ef_no_swap" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi_ef_no_swap.rabi_ef_no_swap">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi_ef_no_swap.</span></span><span class="sig-name descname"><span class="pre">rabi_ef_no_swap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi_ef_no_swap.rabi_ef_no_swap" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-standard_sequences.rabi_ef_swap">
+<span id="standard-sequences-rabi-ef-swap-module"></span><h2>standard_sequences.rabi_ef_swap module<a class="headerlink" href="#module-standard_sequences.rabi_ef_swap" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi_ef_swap.rabi_ef_swap">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi_ef_swap.</span></span><span class="sig-name descname"><span class="pre">rabi_ef_swap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">213.58765318403013</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.23</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi_ef_swap.rabi_ef_swap" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi_ef_swap.rabi_ef_swap_f">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi_ef_swap.</span></span><span class="sig-name descname"><span class="pre">rabi_ef_swap_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">213.58765318403013</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi_ef_swap.rabi_ef_swap_f" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi_ef_swap.swap">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi_ef_swap.</span></span><span class="sig-name descname"><span class="pre">swap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_swap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi_ef_swap.swap" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-standard_sequences.rabi_tomo">
+<span id="standard-sequences-rabi-tomo-module"></span><h2>standard_sequences.rabi_tomo module<a class="headerlink" href="#module-standard_sequences.rabi_tomo" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.rabi_tomo.rabi_ef_swap_tomo">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.rabi_tomo.</span></span><span class="sig-name descname"><span class="pre">rabi_ef_swap_tomo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_rabi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">213.58765318403013</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_amp_J</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tomo_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'z'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_ph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.61</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.rabi_tomo.rabi_ef_swap_tomo" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-standard_sequences.ramsey">
+<span id="standard-sequences-ramsey-module"></span><h2>standard_sequences.ramsey module<a class="headerlink" href="#module-standard_sequences.ramsey" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.ramsey.ramsey">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.ramsey.</span></span><span class="sig-name descname"><span class="pre">ramsey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">101</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pi_echo_coef</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.ramsey.ramsey" title="Link to this definition">¶</a></dt>
+<dd><p>Performs a Ramsey experiment to measure qubit dephasing time (T2*).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit1</strong> (<em>object</em>) -- The qubit under test.</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- General experiment parameters, including mixer offsets.</p></li>
+<li><p><strong>num_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- Number of delay steps for T2* measurement. Defaults to 101.</p></li>
+<li><p><strong>t1_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- Maximum wait time before applying second π/2 pulse (in ns). Defaults to 100000.</p></li>
+<li><p><strong>pi_echo_coef</strong> (<em>float</em><em>, </em><em>optional</em>) -- Echo pulse coefficient. Defaults to 0 (no echo).</p></li>
+<li><p><strong>osc</strong> (<em>int</em><em>, </em><em>optional</em>) -- Oscillation frequency for the phase of the final π/2 pulse. Defaults to 0.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, generates visualizations of the pulse sequence. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated pulse sequence for the Ramsey experiment.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="classes.html#classes.generator.Sequence" title="classes.generator.Sequence">Sequence</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.ramsey.ramsey_quantum_efficiency">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.ramsey.</span></span><span class="sig-name descname"><span class="pre">ramsey_quantum_efficiency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">101</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pi_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ROIF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RO_ram_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.ramsey.ramsey_quantum_efficiency" title="Link to this definition">¶</a></dt>
+<dd><p>Performs a Ramsey experiment with an additional readout pulse to measure
+quantum efficiency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit1</strong> (<em>object</em>) -- The qubit under test.</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- General experiment parameters, including mixer offsets.</p></li>
+<li><p><strong>num_steps</strong> (<em>int</em><em>, </em><em>optional</em>) -- Number of steps in the Ramsey sequence. Defaults to 101.</p></li>
+<li><p><strong>ssm_ge</strong> (<em>float</em><em>, </em><em>optional</em>) -- Single sideband modulation frequency for the π/2 pulses. Defaults to -0.15.</p></li>
+<li><p><strong>pi_ge</strong> (<em>int</em><em>, </em><em>optional</em>) -- Duration of the π/2 pulses in ns. Defaults to 20.</p></li>
+<li><p><strong>ROIF</strong> (<em>float</em><em>, </em><em>optional</em>) -- Readout intermediate frequency. Defaults to 0.</p></li>
+<li><p><strong>RO_ram_amp</strong> (<em>float</em><em>, </em><em>optional</em>) -- Amplitude of additional readout pulse for efficiency measurement. Defaults to 0.0.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, generates visualizations of the pulse sequence. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated pulse sequence for Ramsey quantum efficiency measurement.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="classes.html#classes.generator.Sequence" title="classes.generator.Sequence">Sequence</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-standard_sequences.reg_tomo">
+<span id="standard-sequences-reg-tomo-module"></span><h2>standard_sequences.reg_tomo module<a class="headerlink" href="#module-standard_sequences.reg_tomo" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.reg_tomo.gef_tomo">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.reg_tomo.</span></span><span class="sig-name descname"><span class="pre">gef_tomo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copief</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coswap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copige</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tomo_comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'z'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.reg_tomo.gef_tomo" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-standard_sequences.spectroscopy">
+<span id="standard-sequences-spectroscopy-module"></span><h2>standard_sequences.spectroscopy module<a class="headerlink" href="#module-standard_sequences.spectroscopy" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.spectroscopy.mod_spectroscopy">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.spectroscopy.</span></span><span class="sig-name descname"><span class="pre">mod_spectroscopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mod_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.spectroscopy.mod_spectroscopy" title="Link to this definition">¶</a></dt>
+<dd><p>Performs modulation spectroscopy by sweeping over coupler drive frequency
+:param qubit1: Qubit1
+:type qubit1: object
+:param qubit2: Qubit2
+:type qubit2: object
+:param gen_vals: Other necessary parameters.
+:type gen_vals: dict
+:param mod_start: Sweep start frequency. Defaults to -0.15.
+:type mod_start: float, optional
+:param mod_stop: Sweep stop frequency. Defaults to -0.25.
+:type mod_stop: float, optional
+:param spec_amp: Amplitude of pulse for spectroscopy. Defaults to 0.5.
+:type spec_amp: float, optional
+:param phase: Phase of sweep pulse
+:type phase: float, optional
+:param sweep_time: Sweep duration in ns. Defaults to 200.
+:type sweep_time: int, optional
+:param verbose: If True, displays plots of the pulse. Defaults to True.
+:type verbose: bool, optional</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.spectroscopy.spectroscopy_ef">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.spectroscopy.</span></span><span class="sig-name descname"><span class="pre">spectroscopy_ef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.spectroscopy.spectroscopy_ef" title="Link to this definition">¶</a></dt>
+<dd><p>Performs EF spectroscopy for the qubit by sweeping over single sideband
+frequencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit1</strong> (<em>object</em>) -- Qubit for spectroscopy.</p></li>
+<li><p><strong>qubit2</strong> (<em>object</em>) -- Other qubit for readout.</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- Other necessary parameters.</p></li>
+<li><p><strong>ssm_start</strong> (<em>float</em><em>, </em><em>optional</em>) -- Sweep start frequency. Defaults to -0.15.</p></li>
+<li><p><strong>ssm_stop</strong> (<em>float</em><em>, </em><em>optional</em>) -- Sweep stop frequency. Defaults to -0.25.</p></li>
+<li><p><strong>spec_amp</strong> (<em>float</em><em>, </em><em>optional</em>) -- Amplitude of pulse for spectroscopy. Defaults to 0.5.</p></li>
+<li><p><strong>sweep_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- Sweep duration in ns. Defaults to 200.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) -- If True, displays plots of the pulse. Defaults to True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.spectroscopy.spectroscopy_ge">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.spectroscopy.</span></span><span class="sig-name descname"><span class="pre">spectroscopy_ge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.spectroscopy.spectroscopy_ge" title="Link to this definition">¶</a></dt>
+<dd><p>This function does the ef spectroscopy for the qubit by running over single
+sideband frequencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit</strong> (<em>object</em>) -- qubit that we perform the spectroscopy on</p></li>
+<li><p><strong>qubit2</strong> (<em>object</em>) -- other qubit for readout</p></li>
+<li><p><strong>gen_vals</strong> (<em>dict</em>) -- other parameters that may be necessary</p></li>
+<li><p><strong>ssm_start</strong> (<em>float</em><em>, </em><em>optional</em>) -- sweep start frequency Defaults to -0.15.</p></li>
+<li><p><strong>ssm_stop</strong> (<em>float</em><em>, </em><em>optional</em>) -- sweep stop frequency Defaults to -0.25.</p></li>
+<li><p><strong>spec_amp</strong> (<em>float</em><em>, </em><em>optional</em>) -- amplitude of pulse for spectroscopy Defaults to 0.5.</p></li>
+<li><p><strong>sweep_time</strong> (<em>int</em><em>, </em><em>optional</em>) -- time for sweep 200 -&gt; 200 ns</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) -- show the plot of the pulse. Defaults to True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-standard_sequences.sweeppiamp">
+<span id="standard-sequences-sweeppiamp-module"></span><h2>standard_sequences.sweeppiamp module<a class="headerlink" href="#module-standard_sequences.sweeppiamp" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.sweeppiamp.pi_ef_amp">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.sweeppiamp.</span></span><span class="sig-name descname"><span class="pre">pi_ef_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pi_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">213.58765318403013</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.sweeppiamp.pi_ef_amp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="standard_sequences.sweeppiamp.pi_ge_amp">
+<span class="sig-prename descclassname"><span class="pre">standard_sequences.sweeppiamp.</span></span><span class="sig-name descname"><span class="pre">pi_ge_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_vals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pi_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">213.58765318403013</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#standard_sequences.sweeppiamp.pi_ge_amp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-standard_sequences">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-standard_sequences" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">BlueFridgeNonLin</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">BlueFridgeNonLin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classes.html">classes package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classifiers.html">classifiers package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daq.html">daq package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment_configuration.html">experiment_configuration package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware_control.html">hardware_control package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">standard_sequences package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">BlueFridgeNonLin</a><ul>
+      <li>Previous: <a href="hardware_control.html" title="previous chapter">hardware_control package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Murch Lab.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/standard_sequences.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

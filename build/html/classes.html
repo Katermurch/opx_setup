@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="English" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>classes package &#8212; BlueFridgeNonLin 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=2ed17a75"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="classifiers package" href="classifiers.html" />
+    <link rel="prev" title="analysis package" href="analysis.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="classes-package">
+<h1>classes package<a class="headerlink" href="#classes-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-classes.Nop_class">
+<span id="classes-nop-class-module"></span><h2>classes.Nop_class module<a class="headerlink" href="#module-classes.Nop_class" title="Link to this heading">¶</a></h2>
+<p>Created on Tue Mar  3 14:40:30 2020.</p>
+<p>&#64;author: crow104</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.Nop_class.Nop">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.Nop_class.</span></span><span class="sig-name descname"><span class="pre">Nop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.Nop_class.Nop" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-classes.generator">
+<span id="classes-generator-module"></span><h2>classes.generator module<a class="headerlink" href="#module-classes.generator" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.generator.Pulse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.generator.</span></span><span class="sig-name descname"><span class="pre">Pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssm_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gaussian_bool</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Pulse" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>DESCRIPTION: an object to contain all pulse parameters.</dt><dd><p>If using SSM, self.ssm_bool= True</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>(</strong><strong>base</strong><strong>)</strong> -- duration, start (time), amplitude,</p></li>
+<li><p><strong>ssm_bool</strong><strong>)</strong> (<em>(</em><em>if</em>) -- ssm_freq (GHz), phase</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>FUNCTIONS:</dt><dd><p>make(): create short copy of pulse
+show(): graph output
+copy(): deep copy, I hope...
+NOTES:</p>
+<blockquote>
+<div><p>This does not include difference b/t cos/sin because they can be included in phase</p>
+</div></blockquote>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Pulse.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Pulse.copy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Pulse.make">
+<span class="sig-name descname"><span class="pre">make</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Pulse.make" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Pulse.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Pulse.show" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Pulse.toString">
+<span class="sig-name descname"><span class="pre">toString</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Pulse.toString" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.generator.Sequence">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.generator.</span></span><span class="sig-name descname"><span class="pre">Sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixer_orthogonality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>DESCRIPTION: an object to contain all sequence parameters.
+:param (base): duration, start (time), amplitude,
+:param (if ssm_bool): ssm_freq (GHz), phase</p>
+<p>FUNCTIONS:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>NOTES:</dt><dd><p>This does not include difference b/t cos/sin because they can be included in phase</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.add_gate">
+<span class="sig-name descname"><span class="pre">add_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.add_gate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.add_sweep">
+<span class="sig-name descname"><span class="pre">add_sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_name='none'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_pulse=&lt;classes.generator.Pulse</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.add_sweep" title="Link to this definition">¶</a></dt>
+<dd><p>DESCRIPTION:  A thin wrapper to add pulses to the correct channel
+INPUT: channel = {1-4} (converts to indices); marker=0(channel),1,2; arguments for gen_sweep
+OUTPUT:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.convert_sequence">
+<span class="sig-name descname"><span class="pre">convert_sequence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.convert_sequence" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>DESCRIPTION: writes a single channel INPUT:</dt><dd><p>(optional) mark1/2: numpy arrays with marker data (0,1)</p>
+</dd>
+</dl>
+<p>OUTPUT:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.convert_to_tabor_format">
+<span class="sig-name descname"><span class="pre">convert_to_tabor_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.convert_to_tabor_format" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.insert_both_channels">
+<span class="sig-name descname"><span class="pre">insert_both_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">primary_channel_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.insert_both_channels" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.insert_marker">
+<span class="sig-name descname"><span class="pre">insert_marker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.insert_marker" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.insert_waveform">
+<span class="sig-name descname"><span class="pre">insert_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.insert_waveform" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.load_sequence">
+<span class="sig-name descname"><span class="pre">load_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instr_addr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.load_sequence" title="Link to this definition">¶</a></dt>
+<dd><p>DESCRIPTION: Loads sequences from self.binary_file (created by self.write_sequence)
+INPUT: String name of insturment (eg IP address)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.load_sequence_from_disk">
+<span class="sig-name descname"><span class="pre">load_sequence_from_disk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instr_addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'foo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'C:\\Users\\quantum1\\OneDrive\\Documents\\Python</span> <span class="pre">Scripts\\Important</span> <span class="pre">Blue</span> <span class="pre">Fridge</span> <span class="pre">Python</span> <span class="pre">Files\\New\\nonlinear_QM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ch_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">1]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.load_sequence_from_disk" title="Link to this definition">¶</a></dt>
+<dd><p>DESCRIPTION: loads multi channel INPUT:
+OUTPUT:
+TODO:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="classes.generator.Sequence.write_sequence_to_disk">
+<span class="sig-name descname"><span class="pre">write_sequence_to_disk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'foo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'C:\\Users\\quantum1\\OneDrive\\Documents\\Python</span> <span class="pre">Scripts\\Important</span> <span class="pre">Blue</span> <span class="pre">Fridge</span> <span class="pre">Python</span> <span class="pre">Files\\New\\nonlinear_QM'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_range_01</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.Sequence.write_sequence_to_disk" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>DESCRIPTION: writes a single channel INPUT:</dt><dd><p>(optional) mark1/2: numpy arrays with marker data (0,1)</p>
+</dd>
+</dl>
+<p>OUTPUT:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="classes.generator.create_gate">
+<span class="sig-prename descclassname"><span class="pre">classes.generator.</span></span><span class="sig-name descname"><span class="pre">create_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.create_gate" title="Link to this definition">¶</a></dt>
+<dd><p>DESCRIPTION: for all times (ts) and for all steps (ss): if any amplitude exists, extend in time by width
+INPUT: seq_matrix of size [sequence_steps, samples]
+OUTPUT: binary mask with same size as input
+## KNOWN BUG: if pulse_end + width &gt; num_samples will create error.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="classes.generator.gen_pulse">
+<span class="sig-prename descclassname"><span class="pre">classes.generator.</span></span><span class="sig-name descname"><span class="pre">gen_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest_wave</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.generator.gen_pulse" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>DESCRIPTION: generates pulse on one wave</dt><dd><p>Note, this does not add constant pulese through all steps; that's handled by add_sweep('none')</p>
+</dd>
+<dt>INPUT:</dt><dd><p>Pulse object (contains start,duration, etc)</p>
+</dd>
+<dt>OUTPUT:</dt><dd><p>in-place adjustment to dest_wave</p>
+</dd>
+</dl>
+<p>NOTES:
+TODO:</p>
+</dd></dl>
+
+</section>
+<section id="module-classes.qubit_class">
+<span id="classes-qubit-class-module"></span><h2>classes.qubit_class module<a class="headerlink" href="#module-classes.qubit_class" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.qubit_class.Qubit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.qubit_class.</span></span><span class="sig-name descname"><span class="pre">Qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readout_config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.qubit_class.Qubit" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#classes.qubit_class.Readout" title="classes.qubit_class.Readout"><code class="xref py py-class docutils literal notranslate"><span class="pre">Readout</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="classes.qubit_class.Readout">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">classes.qubit_class.</span></span><span class="sig-name descname"><span class="pre">Readout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#classes.qubit_class.Readout" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-classes">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-classes" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">BlueFridgeNonLin</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">BlueFridgeNonLin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">classes package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classifiers.html">classifiers package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="daq.html">daq package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment_configuration.html">experiment_configuration package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware_control.html">hardware_control package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_sequences.html">standard_sequences package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">BlueFridgeNonLin</a><ul>
+      <li>Previous: <a href="analysis.html" title="previous chapter">analysis package</a></li>
+      <li>Next: <a href="classifiers.html" title="next chapter">classifiers package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Murch Lab.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/classes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
